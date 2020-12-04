@@ -1,0 +1,669 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F70DE93B25778C4A001610D4 /* DeepBreathApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70DE93A25778C4A001610D4 /* DeepBreathApp.swift */; };
+		F70DE93D25778C4A001610D4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70DE93C25778C4A001610D4 /* ContentView.swift */; };
+		F70DE93F25778C4C001610D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F70DE93E25778C4C001610D4 /* Assets.xcassets */; };
+		F70DE94225778C4C001610D4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F70DE94125778C4C001610D4 /* Preview Assets.xcassets */; };
+		F70DE94D25778C4D001610D4 /* DeepBreathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70DE94C25778C4D001610D4 /* DeepBreathTests.swift */; };
+		F70DE95825778C4D001610D4 /* DeepBreathUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70DE95725778C4D001610D4 /* DeepBreathUITests.swift */; };
+		F728AA402579E08200C79667 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F728AA3F2579E08200C79667 /* SettingView.swift */; };
+		F728AA512579E0BA00C79667 /* BiscuitDismissController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F728AA452579E0B900C79667 /* BiscuitDismissController.swift */; };
+		F728AA522579E0BA00C79667 /* ToppingBattery.swift in Sources */ = {isa = PBXBuildFile; fileRef = F728AA462579E0B900C79667 /* ToppingBattery.swift */; };
+		F728AA532579E0BA00C79667 /* BiscuitAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F728AA472579E0B900C79667 /* BiscuitAnimationController.swift */; };
+		F728AA542579E0BA00C79667 /* BisState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F728AA482579E0B900C79667 /* BisState.swift */; };
+		F728AA552579E0BA00C79667 /* ToppingsVisualHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F728AA492579E0B900C79667 /* ToppingsVisualHandler.swift */; };
+		F728AA562579E0BA00C79667 /* BiscuitViewController+Transitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = F728AA4A2579E0B900C79667 /* BiscuitViewController+Transitioning.swift */; };
+		F728AA572579E0BA00C79667 /* BiscuitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F728AA4B2579E0B900C79667 /* BiscuitView.swift */; };
+		F728AA582579E0BA00C79667 /* BatteryIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F728AA4C2579E0B900C79667 /* BatteryIndicator.swift */; };
+		F728AA592579E0BA00C79667 /* ToppingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F728AA4D2579E0B900C79667 /* ToppingButton.swift */; };
+		F728AA5A2579E0BA00C79667 /* ToppingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F728AA4E2579E0B900C79667 /* ToppingLabel.swift */; };
+		F728AA5B2579E0BA00C79667 /* Toppable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F728AA4F2579E0B900C79667 /* Toppable.swift */; };
+		F728AA5C2579E0BA00C79667 /* BiscuitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F728AA502579E0B900C79667 /* BiscuitViewController.swift */; };
+		F7CB417925779C52009FDD10 /* UIColor+Speedy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CB417225779C52009FDD10 /* UIColor+Speedy.swift */; };
+		F7CB417A25779C52009FDD10 /* UILabel+Speedy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CB417325779C52009FDD10 /* UILabel+Speedy.swift */; };
+		F7CB417B25779C52009FDD10 /* UIFont+Speedy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CB417425779C52009FDD10 /* UIFont+Speedy.swift */; };
+		F7CB417E25779C52009FDD10 /* UIImage+Speedy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CB417725779C52009FDD10 /* UIImage+Speedy.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F70DE94925778C4D001610D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F70DE92F25778C4A001610D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F70DE93625778C4A001610D4;
+			remoteInfo = DeepBreath;
+		};
+		F70DE95425778C4D001610D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F70DE92F25778C4A001610D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F70DE93625778C4A001610D4;
+			remoteInfo = DeepBreath;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F70DE93725778C4A001610D4 /* DeepBreath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeepBreath.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F70DE93A25778C4A001610D4 /* DeepBreathApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepBreathApp.swift; sourceTree = "<group>"; };
+		F70DE93C25778C4A001610D4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F70DE93E25778C4C001610D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F70DE94125778C4C001610D4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F70DE94325778C4C001610D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F70DE94825778C4D001610D4 /* DeepBreathTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeepBreathTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F70DE94C25778C4D001610D4 /* DeepBreathTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepBreathTests.swift; sourceTree = "<group>"; };
+		F70DE94E25778C4D001610D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F70DE95325778C4D001610D4 /* DeepBreathUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeepBreathUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F70DE95725778C4D001610D4 /* DeepBreathUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepBreathUITests.swift; sourceTree = "<group>"; };
+		F70DE95925778C4D001610D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F728AA3F2579E08200C79667 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		F728AA452579E0B900C79667 /* BiscuitDismissController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiscuitDismissController.swift; sourceTree = "<group>"; };
+		F728AA462579E0B900C79667 /* ToppingBattery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToppingBattery.swift; sourceTree = "<group>"; };
+		F728AA472579E0B900C79667 /* BiscuitAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiscuitAnimationController.swift; sourceTree = "<group>"; };
+		F728AA482579E0B900C79667 /* BisState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BisState.swift; sourceTree = "<group>"; };
+		F728AA492579E0B900C79667 /* ToppingsVisualHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToppingsVisualHandler.swift; sourceTree = "<group>"; };
+		F728AA4A2579E0B900C79667 /* BiscuitViewController+Transitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BiscuitViewController+Transitioning.swift"; sourceTree = "<group>"; };
+		F728AA4B2579E0B900C79667 /* BiscuitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiscuitView.swift; sourceTree = "<group>"; };
+		F728AA4C2579E0B900C79667 /* BatteryIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatteryIndicator.swift; sourceTree = "<group>"; };
+		F728AA4D2579E0B900C79667 /* ToppingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToppingButton.swift; sourceTree = "<group>"; };
+		F728AA4E2579E0B900C79667 /* ToppingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToppingLabel.swift; sourceTree = "<group>"; };
+		F728AA4F2579E0B900C79667 /* Toppable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toppable.swift; sourceTree = "<group>"; };
+		F728AA502579E0B900C79667 /* BiscuitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiscuitViewController.swift; sourceTree = "<group>"; };
+		F7CB417225779C52009FDD10 /* UIColor+Speedy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Speedy.swift"; sourceTree = "<group>"; };
+		F7CB417325779C52009FDD10 /* UILabel+Speedy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Speedy.swift"; sourceTree = "<group>"; };
+		F7CB417425779C52009FDD10 /* UIFont+Speedy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Speedy.swift"; sourceTree = "<group>"; };
+		F7CB417725779C52009FDD10 /* UIImage+Speedy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Speedy.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F70DE93425778C4A001610D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F70DE94525778C4D001610D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F70DE95025778C4D001610D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F70DE92E25778C4A001610D4 = {
+			isa = PBXGroup;
+			children = (
+				F70DE93925778C4A001610D4 /* DeepBreath */,
+				F70DE94B25778C4D001610D4 /* DeepBreathTests */,
+				F70DE95625778C4D001610D4 /* DeepBreathUITests */,
+				F70DE93825778C4A001610D4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F70DE93825778C4A001610D4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F70DE93725778C4A001610D4 /* DeepBreath.app */,
+				F70DE94825778C4D001610D4 /* DeepBreathTests.xctest */,
+				F70DE95325778C4D001610D4 /* DeepBreathUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F70DE93925778C4A001610D4 /* DeepBreath */ = {
+			isa = PBXGroup;
+			children = (
+				F70DE93A25778C4A001610D4 /* DeepBreathApp.swift */,
+				F70DE93C25778C4A001610D4 /* ContentView.swift */,
+				F728AA3F2579E08200C79667 /* SettingView.swift */,
+				F728AA442579E0B900C79667 /* BiscuitView */,
+				F7CB417025779C52009FDD10 /* Extension */,
+				F70DE93E25778C4C001610D4 /* Assets.xcassets */,
+				F70DE94325778C4C001610D4 /* Info.plist */,
+				F70DE94025778C4C001610D4 /* Preview Content */,
+			);
+			path = DeepBreath;
+			sourceTree = "<group>";
+		};
+		F70DE94025778C4C001610D4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F70DE94125778C4C001610D4 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F70DE94B25778C4D001610D4 /* DeepBreathTests */ = {
+			isa = PBXGroup;
+			children = (
+				F70DE94C25778C4D001610D4 /* DeepBreathTests.swift */,
+				F70DE94E25778C4D001610D4 /* Info.plist */,
+			);
+			path = DeepBreathTests;
+			sourceTree = "<group>";
+		};
+		F70DE95625778C4D001610D4 /* DeepBreathUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F70DE95725778C4D001610D4 /* DeepBreathUITests.swift */,
+				F70DE95925778C4D001610D4 /* Info.plist */,
+			);
+			path = DeepBreathUITests;
+			sourceTree = "<group>";
+		};
+		F728AA442579E0B900C79667 /* BiscuitView */ = {
+			isa = PBXGroup;
+			children = (
+				F728AA452579E0B900C79667 /* BiscuitDismissController.swift */,
+				F728AA462579E0B900C79667 /* ToppingBattery.swift */,
+				F728AA472579E0B900C79667 /* BiscuitAnimationController.swift */,
+				F728AA482579E0B900C79667 /* BisState.swift */,
+				F728AA492579E0B900C79667 /* ToppingsVisualHandler.swift */,
+				F728AA4A2579E0B900C79667 /* BiscuitViewController+Transitioning.swift */,
+				F728AA4B2579E0B900C79667 /* BiscuitView.swift */,
+				F728AA4C2579E0B900C79667 /* BatteryIndicator.swift */,
+				F728AA4D2579E0B900C79667 /* ToppingButton.swift */,
+				F728AA4E2579E0B900C79667 /* ToppingLabel.swift */,
+				F728AA4F2579E0B900C79667 /* Toppable.swift */,
+				F728AA502579E0B900C79667 /* BiscuitViewController.swift */,
+			);
+			path = BiscuitView;
+			sourceTree = "<group>";
+		};
+		F7CB417025779C52009FDD10 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F7CB417225779C52009FDD10 /* UIColor+Speedy.swift */,
+				F7CB417325779C52009FDD10 /* UILabel+Speedy.swift */,
+				F7CB417425779C52009FDD10 /* UIFont+Speedy.swift */,
+				F7CB417725779C52009FDD10 /* UIImage+Speedy.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F70DE93625778C4A001610D4 /* DeepBreath */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F70DE95C25778C4D001610D4 /* Build configuration list for PBXNativeTarget "DeepBreath" */;
+			buildPhases = (
+				F70DE93325778C4A001610D4 /* Sources */,
+				F70DE93425778C4A001610D4 /* Frameworks */,
+				F70DE93525778C4A001610D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DeepBreath;
+			productName = DeepBreath;
+			productReference = F70DE93725778C4A001610D4 /* DeepBreath.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F70DE94725778C4D001610D4 /* DeepBreathTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F70DE95F25778C4D001610D4 /* Build configuration list for PBXNativeTarget "DeepBreathTests" */;
+			buildPhases = (
+				F70DE94425778C4D001610D4 /* Sources */,
+				F70DE94525778C4D001610D4 /* Frameworks */,
+				F70DE94625778C4D001610D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F70DE94A25778C4D001610D4 /* PBXTargetDependency */,
+			);
+			name = DeepBreathTests;
+			productName = DeepBreathTests;
+			productReference = F70DE94825778C4D001610D4 /* DeepBreathTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F70DE95225778C4D001610D4 /* DeepBreathUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F70DE96225778C4D001610D4 /* Build configuration list for PBXNativeTarget "DeepBreathUITests" */;
+			buildPhases = (
+				F70DE94F25778C4D001610D4 /* Sources */,
+				F70DE95025778C4D001610D4 /* Frameworks */,
+				F70DE95125778C4D001610D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F70DE95525778C4D001610D4 /* PBXTargetDependency */,
+			);
+			name = DeepBreathUITests;
+			productName = DeepBreathUITests;
+			productReference = F70DE95325778C4D001610D4 /* DeepBreathUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F70DE92F25778C4A001610D4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					F70DE93625778C4A001610D4 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					F70DE94725778C4D001610D4 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = F70DE93625778C4A001610D4;
+					};
+					F70DE95225778C4D001610D4 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = F70DE93625778C4A001610D4;
+					};
+				};
+			};
+			buildConfigurationList = F70DE93225778C4A001610D4 /* Build configuration list for PBXProject "DeepBreath" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F70DE92E25778C4A001610D4;
+			productRefGroup = F70DE93825778C4A001610D4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F70DE93625778C4A001610D4 /* DeepBreath */,
+				F70DE94725778C4D001610D4 /* DeepBreathTests */,
+				F70DE95225778C4D001610D4 /* DeepBreathUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F70DE93525778C4A001610D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F70DE94225778C4C001610D4 /* Preview Assets.xcassets in Resources */,
+				F70DE93F25778C4C001610D4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F70DE94625778C4D001610D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F70DE95125778C4D001610D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F70DE93325778C4A001610D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F70DE93D25778C4A001610D4 /* ContentView.swift in Sources */,
+				F7CB417925779C52009FDD10 /* UIColor+Speedy.swift in Sources */,
+				F7CB417E25779C52009FDD10 /* UIImage+Speedy.swift in Sources */,
+				F728AA522579E0BA00C79667 /* ToppingBattery.swift in Sources */,
+				F728AA5A2579E0BA00C79667 /* ToppingLabel.swift in Sources */,
+				F728AA402579E08200C79667 /* SettingView.swift in Sources */,
+				F728AA512579E0BA00C79667 /* BiscuitDismissController.swift in Sources */,
+				F728AA582579E0BA00C79667 /* BatteryIndicator.swift in Sources */,
+				F728AA532579E0BA00C79667 /* BiscuitAnimationController.swift in Sources */,
+				F728AA542579E0BA00C79667 /* BisState.swift in Sources */,
+				F728AA572579E0BA00C79667 /* BiscuitView.swift in Sources */,
+				F728AA552579E0BA00C79667 /* ToppingsVisualHandler.swift in Sources */,
+				F728AA592579E0BA00C79667 /* ToppingButton.swift in Sources */,
+				F7CB417B25779C52009FDD10 /* UIFont+Speedy.swift in Sources */,
+				F7CB417A25779C52009FDD10 /* UILabel+Speedy.swift in Sources */,
+				F70DE93B25778C4A001610D4 /* DeepBreathApp.swift in Sources */,
+				F728AA5B2579E0BA00C79667 /* Toppable.swift in Sources */,
+				F728AA562579E0BA00C79667 /* BiscuitViewController+Transitioning.swift in Sources */,
+				F728AA5C2579E0BA00C79667 /* BiscuitViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F70DE94425778C4D001610D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F70DE94D25778C4D001610D4 /* DeepBreathTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F70DE94F25778C4D001610D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F70DE95825778C4D001610D4 /* DeepBreathUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F70DE94A25778C4D001610D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F70DE93625778C4A001610D4 /* DeepBreath */;
+			targetProxy = F70DE94925778C4D001610D4 /* PBXContainerItemProxy */;
+		};
+		F70DE95525778C4D001610D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F70DE93625778C4A001610D4 /* DeepBreath */;
+			targetProxy = F70DE95425778C4D001610D4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F70DE95A25778C4D001610D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F70DE95B25778C4D001610D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F70DE95D25778C4D001610D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"DeepBreath/Preview Content\"";
+				DEVELOPMENT_TEAM = 226YH5AK6L;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = DeepBreath/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = QL.DeepBreath;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F70DE95E25778C4D001610D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"DeepBreath/Preview Content\"";
+				DEVELOPMENT_TEAM = 226YH5AK6L;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = DeepBreath/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = QL.DeepBreath;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F70DE96025778C4D001610D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 226YH5AK6L;
+				INFOPLIST_FILE = DeepBreathTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = QL.DeepBreathTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeepBreath.app/DeepBreath";
+			};
+			name = Debug;
+		};
+		F70DE96125778C4D001610D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 226YH5AK6L;
+				INFOPLIST_FILE = DeepBreathTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = QL.DeepBreathTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeepBreath.app/DeepBreath";
+			};
+			name = Release;
+		};
+		F70DE96325778C4D001610D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 226YH5AK6L;
+				INFOPLIST_FILE = DeepBreathUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = QL.DeepBreathUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DeepBreath;
+			};
+			name = Debug;
+		};
+		F70DE96425778C4D001610D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 226YH5AK6L;
+				INFOPLIST_FILE = DeepBreathUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = QL.DeepBreathUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DeepBreath;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F70DE93225778C4A001610D4 /* Build configuration list for PBXProject "DeepBreath" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F70DE95A25778C4D001610D4 /* Debug */,
+				F70DE95B25778C4D001610D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F70DE95C25778C4D001610D4 /* Build configuration list for PBXNativeTarget "DeepBreath" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F70DE95D25778C4D001610D4 /* Debug */,
+				F70DE95E25778C4D001610D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F70DE95F25778C4D001610D4 /* Build configuration list for PBXNativeTarget "DeepBreathTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F70DE96025778C4D001610D4 /* Debug */,
+				F70DE96125778C4D001610D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F70DE96225778C4D001610D4 /* Build configuration list for PBXNativeTarget "DeepBreathUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F70DE96325778C4D001610D4 /* Debug */,
+				F70DE96425778C4D001610D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F70DE92F25778C4A001610D4 /* Project object */;
+}
