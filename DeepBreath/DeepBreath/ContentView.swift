@@ -69,12 +69,15 @@ struct ContentView: View {
 //                }
 //            }
 //            else {
-                ButtonActionView()
+//
 //            }
+            
+            BreathInView().environmentObject(TimerSettings())
               
             Spacer()
 
             BottomTextView()
+            ButtonActionView()
             
             Spacer()
             
@@ -156,27 +159,29 @@ struct ContentView: View {
 struct ButtonActionView: View {
     @State var isShow = false
     @State var animOffset: Double = 0
+    
     var body: some View {
-        Button(action:{
-//            withAnimation(.spring()) {
-//                self.animOffset += 1
-//            }
-            isShow = true
-        })
-        {
-            Text("Try again")
-                .font(Font.custom("PingFangSC-Thin", size: 22))
-                .foregroundColor(Color(UIColor.hex("5A5E61")))
-                .shadow(radius: 0.2)
-                .padding()
-        }.buttonStyle(PlainButtonStyle())
-        .sheet(isPresented: $isShow, onDismiss: {
-                
-            }) {
-            SettingView()
-        }
-        .background(Color.yellow)
-        .modifier(ButtonEffect(offset: animOffset))
+        
+        HStack{
+            Button(action:{
+                isShow = true
+            })
+            {
+                Text("Again")
+                    .font(Font.custom("PingFangSC-Thin", size: 22))
+                    .foregroundColor(Color(UIColor.hex("5A5E61")))
+                    .shadow(radius: 0.2)
+            }
+            .buttonStyle(PlainButtonStyle())
+            .sheet(isPresented: $isShow, onDismiss: {
+                    
+                }) {
+                SettingView()
+            }
+            Spacer()
+        }.padding(EdgeInsets(top: 10, leading: 30, bottom: 0, trailing: 30))
+        
+        
     }
 }
 
@@ -200,31 +205,31 @@ struct ButtonEffect: GeometryEffect {
     }
 }
 
-struct BreathInView: View {
-    @State var row: Int
-    
-    var body: some View {
-        VStack(spacing: 25) {
-            ForEach(0..<15) { number in
-                
-                HStack(spacing: 25) {
-                    ForEach(0..<10) {_ in
-                        
-                        flowerView()
-                            .foregroundColor(self.row < number ? Color(UIColor.hex("D8D8D7")) : Color(UIColor.hex("5A5E61")))
-                            .frame(width: 12, height: 12)
-                            .animation(
-                                Animation.easeInOut(duration: 0.35)
-                                    .delay(0.25)
-                            )
-                    }
-                }
-                
-            }
-        }
-        
-    }
-}
+//struct BreathInView: View {
+//    @State var row: Int
+//
+//    var body: some View {
+//        VStack(spacing: 25) {
+//            ForEach(0..<15) { number in
+//                
+//                HStack(spacing: 25) {
+//                    ForEach(0..<10) {_ in
+//
+//                        flowerView()
+//                            .foregroundColor(self.row < number ? Color(UIColor.hex("D8D8D7")) : Color(UIColor.hex("5A5E61")))
+//                            .frame(width: 12, height: 12)
+//                            .animation(
+//                                Animation.easeInOut(duration: 0.35)
+//                                    .delay(0.25)
+//                            )
+//                    }
+//                }
+//
+//            }
+//        }
+//
+//    }
+//}
 
 struct BottomTextView: View {
     
