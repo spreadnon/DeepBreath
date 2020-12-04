@@ -73,6 +73,7 @@ struct ContentView: View {
 //            }
             
             BreathInView().environmentObject(TimerSettings())
+                .padding(EdgeInsets(top: 30, leading: 30, bottom: 0, trailing: 30))
               
             Spacer()
 
@@ -82,7 +83,7 @@ struct ContentView: View {
             Spacer()
             
         }.onAppear{
-            startTimer()
+//            startTimer()
         }
     }
 
