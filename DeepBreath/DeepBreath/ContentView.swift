@@ -23,20 +23,24 @@ struct ContentView: View {
             if stepFinish == 0{
                 DBreathInhaleView(stepFinish:$stepFinish).environmentObject(TimerSettings())
                     .padding(EdgeInsets(top: 30, leading: 30, bottom: 0, trailing: 30))
+                   
             }
             
             if stepFinish == 1{
                 DBreathHoldView(stepFinish:$stepFinish).environmentObject(TimerSettings())
                     .padding(EdgeInsets(top: 30, leading: 30, bottom: 0, trailing: 30))
+                    
             }
             
             if stepFinish == 2{
                 DBreathExhaleView(stepFinish:$stepFinish).environmentObject(TimerSettings())
                     .padding(EdgeInsets(top: 30, leading: 30, bottom: 0, trailing: 30))
+                    
             }
             
             if stepFinish == 3{
                 ButtonActionView(stepFinish:$stepFinish)
+                   
             }
               
             Spacer()
@@ -154,12 +158,9 @@ struct flowerView: View {
 struct flowerViewOut: View {
     
     var body: some View {
-        //        ZStack{
         Rectangle()
             .frame(width: 12, height: 3)
             .cornerRadius(1.5)
-            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-        //        }
     }
 }
 

@@ -15,6 +15,7 @@ struct DBreathHoldView: View {
     @Binding var stepFinish : Int
     @State var rowNumber = 0
     @State var sectionNumber = 0
+    @State var flowerViewDegrees = 0.0
     
     var body: some View {
         VStack(spacing: 25) {
@@ -30,38 +31,42 @@ struct DBreathHoldView: View {
                                 Animation.easeInOut(duration: 0.35)
                                     .delay(0.25)
                             )
-                            .rotationEffect(.degrees(45))
+                            .rotationEffect(.degrees(flowerViewDegrees))
                         
                     }
                 }
             }
         }
         .onAppear{
+            flowerViewDegrees = 45.0
             stepFinish = 1
             self.timer2 = Timer.publish(every: (timerSettings.stepTwo / Double(currentRow)), on: .main, in: .common).autoconnect()
         }
         .onReceive(timer2) { currentTime in
             print(currentTime)
+            
             if self.currentRow < 0{
                 self.timer2.upstream.connect().cancel()
                 self.timer3.upstream.connect().cancel()
                 
-                sleep(1)
+                sleep(UInt32(0.25))
                 stepFinish = 2
             }
             self.currentRow -= 1
         }
         
         .onReceive(timer3) { currentTime in
-            sectionNumber = getRandom()
-            rowNumber = getRandom()
+            
+            
+            sectionNumber = getRandom(bigest: 13)
+            rowNumber = getRandom(bigest: 10)
         }
     }
 }
 
-func getRandom()->Int{
+func getRandom(bigest:Int)->Int{
     //1:下面是使用arc4random函数求一个1~100的随机数（包括1和100）
-    let randomNumber:Int = Int(arc4random() % 10)
+    let randomNumber:Int = Int(arc4random() % UInt32(bigest))
     print(randomNumber)
     return randomNumber
 }

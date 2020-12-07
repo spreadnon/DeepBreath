@@ -43,7 +43,7 @@ struct DBreathInhaleView: View {
             
             if self.currentRow < 0{
                 self.timer2.upstream.connect().cancel()
-                sleep(1)
+                sleep(UInt32(0.25))
                 stepFinish = 1
             }
             self.currentRow -= 1

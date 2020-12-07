@@ -39,7 +39,7 @@ struct DBreathExhaleView: View {
             print(currentTime)
             if self.currentRow > 13{
                 self.timer2.upstream.connect().cancel()
-                sleep(1)
+                sleep(UInt32(0.5))
                 stepFinish = 3
             }
             self.currentRow += 1
