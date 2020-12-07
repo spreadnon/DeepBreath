@@ -33,7 +33,6 @@
 		F728AA5B2579E0BA00C79667 /* Toppable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F728AA4F2579E0B900C79667 /* Toppable.swift */; };
 		F728AA5C2579E0BA00C79667 /* BiscuitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F728AA502579E0B900C79667 /* BiscuitViewController.swift */; };
 		F7A1D3CA257E1BC100EE4478 /* DBreathHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A1D3C9257E1BC000EE4478 /* DBreathHomeView.swift */; };
-		F7A1D3D0257E3C6600EE4478 /* tree.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A1D3CF257E3C6600EE4478 /* tree.png */; };
 		F7CB417925779C52009FDD10 /* UIColor+Speedy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CB417225779C52009FDD10 /* UIColor+Speedy.swift */; };
 		F7CB417A25779C52009FDD10 /* UILabel+Speedy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CB417325779C52009FDD10 /* UILabel+Speedy.swift */; };
 		F7CB417B25779C52009FDD10 /* UIFont+Speedy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CB417425779C52009FDD10 /* UIFont+Speedy.swift */; };
@@ -90,7 +89,6 @@
 		F728AA4F2579E0B900C79667 /* Toppable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toppable.swift; sourceTree = "<group>"; };
 		F728AA502579E0B900C79667 /* BiscuitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiscuitViewController.swift; sourceTree = "<group>"; };
 		F7A1D3C9257E1BC000EE4478 /* DBreathHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBreathHomeView.swift; sourceTree = "<group>"; };
-		F7A1D3CF257E3C6600EE4478 /* tree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tree.png; sourceTree = "<group>"; };
 		F7CB417225779C52009FDD10 /* UIColor+Speedy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Speedy.swift"; sourceTree = "<group>"; };
 		F7CB417325779C52009FDD10 /* UILabel+Speedy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Speedy.swift"; sourceTree = "<group>"; };
 		F7CB417425779C52009FDD10 /* UIFont+Speedy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Speedy.swift"; sourceTree = "<group>"; };
@@ -145,7 +143,6 @@
 		F70DE93925778C4A001610D4 /* DeepBreath */ = {
 			isa = PBXGroup;
 			children = (
-				F7A1D3CF257E3C6600EE4478 /* tree.png */,
 				F70DE93A25778C4A001610D4 /* DeepBreathApp.swift */,
 				F7A1D3C9257E1BC000EE4478 /* DBreathHomeView.swift */,
 				F70DE93C25778C4A001610D4 /* ContentView.swift */,
@@ -326,7 +323,6 @@
 			files = (
 				F70DE94225778C4C001610D4 /* Preview Assets.xcassets in Resources */,
 				F70DE93F25778C4C001610D4 /* Assets.xcassets in Resources */,
-				F7A1D3D0257E3C6600EE4478 /* tree.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

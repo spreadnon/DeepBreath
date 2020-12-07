@@ -13,6 +13,7 @@ struct DBreathHomeView: View {
     
     var body: some View {
         VStack(spacing: 0) {
+            
             headerView()
                 .frame(width: UIScreen.main.bounds.width,height: 300)
                 .background(Color.white)
@@ -34,7 +35,7 @@ struct DBreathHomeView: View {
                 .offset(x: 0, y: -50)
             
             ExhaleView()
-                .offset(x: 0, y: -35)
+                .offset(x: 0, y: -70)
             
 
             
@@ -61,10 +62,10 @@ struct headerView: View {
     
     var body: some View {
         ZStack{
-//            Image("tree")
-//                .resizable()
-//                .scaledToFit()
-//                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width, alignment: .top)
+            Image("VirtualStores")
+                .resizable()
+                .scaledToFit()
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width, alignment: .top)
             
             WeatherView()
         }.padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
@@ -90,7 +91,7 @@ struct InhaleView: View {
                     Text("Inhale")
                         .font(Font.custom("Avenir-Black", size: 22))
                         .foregroundColor(Color.white)
-                        .shadow(radius: 0.2)
+                        .shadow(radius: 0.1)
                         .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
                     
                     Text("time: 4s")
@@ -107,7 +108,7 @@ struct InhaleView: View {
 //            .offset(x: 0, y: -20)
             .padding(EdgeInsets(top: 10, leading: 30, bottom: 10, trailing: 30))
             
-        }
+        }.shadow(color: Color(UIColor.hex("0237B5")), radius: 5, x: 0, y: 0)
     }
 }
 
@@ -144,7 +145,7 @@ struct HoldView: View {
 //            .offset(x: 0, y: -20)
             .padding(EdgeInsets(top: 10, leading: 30, bottom: 10, trailing: 30))
                 
-        }
+        }.shadow(color: Color(UIColor.hex("0237B5")), radius: 5, x: 0, y: 0)
     }
 }
 
@@ -152,9 +153,9 @@ struct ExhaleView: View {
     
     var body: some View {
         ZStack{
-//            Heart111()
-//                .frame(width: UIScreen.main.bounds.width,height: 150)
-//                .foregroundColor(Color(UIColor.hex("125CFA")))
+            Heart111()
+                .frame(width: UIScreen.main.bounds.width,height: 150)
+                .foregroundColor(Color(UIColor.hex("003CBF")))
             
             HStack{
                 flowerView()
@@ -173,7 +174,7 @@ struct ExhaleView: View {
                         .font(Font.custom("Avenir-Book", size: 16))
                         .foregroundColor(Color.white)
                         .shadow(radius: 0.2)
-                        .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
+                        .padding(EdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 0))
                 }
                 
                 Spacer()
@@ -181,7 +182,7 @@ struct ExhaleView: View {
 //            .offset(x: 0, y: -20)
             .padding(EdgeInsets(top: 10, leading: 30, bottom: 10, trailing: 30))
                 
-        }
+        }.shadow(color: Color(UIColor.hex("0237B5")), radius: 5, x: 0, y: -2)
     }
 }
 
