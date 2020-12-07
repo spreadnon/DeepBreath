@@ -156,10 +156,9 @@ struct flowerView: View {
 }
 
 struct flowerViewOut: View {
-    
     var body: some View {
         Rectangle()
-            .frame(width: 12, height: 3)
+            .frame(width: 18, height: 3)
             .cornerRadius(1.5)
     }
 }
