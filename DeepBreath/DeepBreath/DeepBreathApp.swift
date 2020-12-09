@@ -11,9 +11,10 @@ import SwiftUI
 struct DeepBreathApp: App {
     var body: some Scene {
         WindowGroup {
-            //ContentView().environmentObject(TimerSettings())
+//            ContentView().environmentObject(TimerSettings())
 //            PathsView()
-            DBreathHomeView()
+//            DBreathHomeView()
+            DBreathPopView()
         }
     }
 }

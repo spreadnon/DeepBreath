@@ -11,6 +11,8 @@
 		3F87772F257CFEF600F766F4 /* DBreathHoldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F87772E257CFEF600F766F4 /* DBreathHoldView.swift */; };
 		3F877734257CFF7900F766F4 /* DBreathExhaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F877733257CFF7900F766F4 /* DBreathExhaleView.swift */; };
 		3F962EBF257D10DB0072AC85 /* BottomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F962EBE257D10DB0072AC85 /* BottomTextView.swift */; };
+		F705CB5525806DC700D01A61 /* DBreathPopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F705CB5425806DC700D01A61 /* DBreathPopView.swift */; };
+		F705CBE92580D7FD00D01A61 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F705CBE82580D7FD00D01A61 /* MailView.swift */; };
 		F70DE93B25778C4A001610D4 /* DeepBreathApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70DE93A25778C4A001610D4 /* DeepBreathApp.swift */; };
 		F70DE93D25778C4A001610D4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70DE93C25778C4A001610D4 /* ContentView.swift */; };
 		F70DE93F25778C4C001610D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F70DE93E25778C4C001610D4 /* Assets.xcassets */; };
@@ -64,6 +66,8 @@
 		3F87772E257CFEF600F766F4 /* DBreathHoldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBreathHoldView.swift; sourceTree = "<group>"; };
 		3F877733257CFF7900F766F4 /* DBreathExhaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBreathExhaleView.swift; sourceTree = "<group>"; };
 		3F962EBE257D10DB0072AC85 /* BottomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTextView.swift; sourceTree = "<group>"; };
+		F705CB5425806DC700D01A61 /* DBreathPopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBreathPopView.swift; sourceTree = "<group>"; };
+		F705CBE82580D7FD00D01A61 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		F70DE93725778C4A001610D4 /* DeepBreath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeepBreath.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F70DE93A25778C4A001610D4 /* DeepBreathApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepBreathApp.swift; sourceTree = "<group>"; };
 		F70DE93C25778C4A001610D4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -150,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				F70DE93A25778C4A001610D4 /* DeepBreathApp.swift */,
+				F705CB5425806DC700D01A61 /* DBreathPopView.swift */,
 				F7A1D3C9257E1BC000EE4478 /* DBreathHomeView.swift */,
 				F7D908CE257F5A8F0046D8F2 /* HeaderCardView.swift */,
 				F70DE93C25778C4A001610D4 /* ContentView.swift */,
@@ -162,6 +167,7 @@
 				F7D908C2257F4C6E0046D8F2 /* CircleLabel.swift */,
 				F7D908C9257F52D00046D8F2 /* Settings.swift */,
 				F728AA3F2579E08200C79667 /* SettingView.swift */,
+				F705CBE82580D7FD00D01A61 /* MailView.swift */,
 				F728AA442579E0B900C79667 /* BiscuitView */,
 				F7CB417025779C52009FDD10 /* Extension */,
 				F70DE93E25778C4C001610D4 /* Assets.xcassets */,
@@ -359,8 +365,10 @@
 				F70DE93D25778C4A001610D4 /* ContentView.swift in Sources */,
 				F7CB417925779C52009FDD10 /* UIColor+Speedy.swift in Sources */,
 				F7CB417E25779C52009FDD10 /* UIImage+Speedy.swift in Sources */,
+				F705CBE92580D7FD00D01A61 /* MailView.swift in Sources */,
 				3F877727257CFEA100F766F4 /* DBreathInhaleView.swift in Sources */,
 				3F877734257CFF7900F766F4 /* DBreathExhaleView.swift in Sources */,
+				F705CB5525806DC700D01A61 /* DBreathPopView.swift in Sources */,
 				F728AA522579E0BA00C79667 /* ToppingBattery.swift in Sources */,
 				F728AA5A2579E0BA00C79667 /* ToppingLabel.swift in Sources */,
 				F728AA402579E08200C79667 /* SettingView.swift in Sources */,
