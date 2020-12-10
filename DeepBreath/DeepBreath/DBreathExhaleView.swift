@@ -14,7 +14,7 @@ struct DBreathExhaleView: View {
     @Binding var stepFinish : Int
     var body: some View {
         VStack(spacing: 25) {
-            ForEach(0..<13) { number in
+            ForEach(0..<16) { number in
                 HStack(spacing: 25) {
                     ForEach(0..<10) {_ in
                         

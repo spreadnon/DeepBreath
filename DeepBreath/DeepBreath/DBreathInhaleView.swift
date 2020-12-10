@@ -16,7 +16,7 @@ struct DBreathInhaleView: View {
     
     var body: some View {
         VStack(spacing: 25) {
-            ForEach(0..<13) { section in
+            ForEach(0..<16) { section in
                 HStack(spacing: 25) {
                     ForEach(0..<10) { row in
                         

@@ -19,9 +19,9 @@ struct DBreathHoldView: View {
     
     var body: some View {
         VStack(spacing: 25) {
-            ForEach(0..<13) { section in
+            ForEach(0..<16) { section in
                 HStack(spacing: 25) {
-                    ForEach(0..<10) { row in
+                    ForEach(0..<8) { row in
                         
                         flowerView()
 //                            .foregroundColor(self.currentRow <= section ? Color(UIColor.hex("D8D8D7")) : Color(UIColor.hex("5A5E61")))
