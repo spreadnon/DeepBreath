@@ -8,29 +8,25 @@
 import SwiftUI
 
 struct DBreathHoldView: View {
+    @Binding var secondCount : Int
     @EnvironmentObject var timerSettings: TimerSettings
-    @State var currentRow = 13
+    @State var currentRow = 18
     @State var timer2 = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    @State var timer3 = Timer.publish(every: 0.25, on: .main, in: .common).autoconnect()
+    @State var timer1 = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @Binding var stepFinish : Int
     @State var rowNumber = 0
     @State var sectionNumber = 0
     @State var flowerViewDegrees = 0.0
+//    @State var timer1 = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
-        VStack(spacing: 25) {
-            ForEach(0..<16) { section in
-                HStack(spacing: 25) {
-                    ForEach(0..<8) { row in
+        VStack(spacing: 15) {
+            ForEach(0..<18) { section in
+                HStack(spacing: 15) {
+                    ForEach(0..<11) {_ in
                         
-                        flowerView()
-//                            .foregroundColor(self.currentRow <= section ? Color(UIColor.hex("D8D8D7")) : Color(UIColor.hex("5A5E61")))
-                            .foregroundColor((rowNumber == row || sectionNumber == section ) ? Color(UIColor.hex("5A5E61")) : Color(UIColor.hex("D8D8D7")))
-                            .frame(width: 12, height: 12)
-                            .animation(
-                                Animation.easeInOut(duration: 0.35)
-                                    .delay(0.25)
-                            )
+                        LoadingFlowersView()
+                            .foregroundColor(self.currentRow <= section ? Color(UIColor.hex("D8D8D7")) : Color(UIColor.hex("5A5E61")))
                             .rotationEffect(.degrees(flowerViewDegrees))
                         
                     }
@@ -40,6 +36,7 @@ struct DBreathHoldView: View {
         .onAppear{
             flowerViewDegrees = 45.0
             stepFinish = 1
+            secondCount = 0
             self.timer2 = Timer.publish(every: (timerSettings.stepTwo / Double(currentRow)), on: .main, in: .common).autoconnect()
         }
         .onReceive(timer2) { currentTime in
@@ -47,7 +44,7 @@ struct DBreathHoldView: View {
             
             if self.currentRow < 0{
                 self.timer2.upstream.connect().cancel()
-                self.timer3.upstream.connect().cancel()
+                self.timer1.upstream.connect().cancel()
                 
                 sleep(UInt32(0.25))
                 stepFinish = 2
@@ -55,11 +52,11 @@ struct DBreathHoldView: View {
             self.currentRow -= 1
         }
         
-        .onReceive(timer3) { currentTime in
+        .onReceive(timer1) { currentTime in
+//            sectionNumber = getRandom(bigest: 13)
+//            rowNumber = getRandom(bigest: 10)
             
-            
-            sectionNumber = getRandom(bigest: 13)
-            rowNumber = getRandom(bigest: 10)
+            self.secondCount += 1
         }
     }
 }

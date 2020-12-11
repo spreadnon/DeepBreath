@@ -20,30 +20,30 @@ struct ContentView: View {
     var body: some View {
         VStack(spacing: 25) {
             
-            if stepFinish == 0{
-                DBreathInhaleView(stepFinish:$stepFinish).environmentObject(TimerSettings())
-                    .padding(EdgeInsets(top: 30, leading: 30, bottom: 0, trailing: 30))
-                   
-            }
-            
-            if stepFinish == 1{
-                DBreathHoldView(stepFinish:$stepFinish).environmentObject(TimerSettings())
-                    .padding(EdgeInsets(top: 30, leading: 30, bottom: 0, trailing: 30))
-                    
-            }
-            
-            if stepFinish == 2{
-                DBreathExhaleView(stepFinish:$stepFinish).environmentObject(TimerSettings())
-                    .padding(EdgeInsets(top: 30, leading: 30, bottom: 0, trailing: 30))
-                    
-            }
-            
-            if stepFinish == 3{
-                ButtonActionView(stepFinish:$stepFinish)
-                   
-            }
-              
-            Spacer()
+//            if stepFinish == 0{
+//                DBreathInhaleView(stepFinish:$stepFinish).environmentObject(TimerSettings())
+//                    .padding(EdgeInsets(top: 30, leading: 30, bottom: 0, trailing: 30))
+//                   
+//            }
+//            
+//            if stepFinish == 1{
+//                DBreathHoldView(stepFinish:$stepFinish).environmentObject(TimerSettings())
+//                    .padding(EdgeInsets(top: 30, leading: 30, bottom: 0, trailing: 30))
+//                    
+//            }
+//            
+//            if stepFinish == 2{
+//                DBreathExhaleView(stepFinish:$stepFinish).environmentObject(TimerSettings())
+//                    .padding(EdgeInsets(top: 30, leading: 30, bottom: 0, trailing: 30))
+//                    
+//            }
+//            
+//            if stepFinish == 3{
+//                ButtonActionView(stepFinish:$stepFinish)
+//                   
+//            }
+//              
+//            Spacer()
 
             BottomTextView()
             

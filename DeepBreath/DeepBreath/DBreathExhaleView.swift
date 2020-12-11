@@ -8,42 +8,71 @@
 import SwiftUI
 
 struct DBreathExhaleView: View {
+    @Binding var secondCount : Int
     @EnvironmentObject var timerSettings: TimerSettings
     @State var currentRow = 0
+    @State var timer1 = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @State var timer2 = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @Binding var stepFinish : Int
     var body: some View {
-        VStack(spacing: 25) {
-            ForEach(0..<16) { number in
-                HStack(spacing: 25) {
-                    ForEach(0..<10) {_ in
+        VStack(spacing: 15) {
+            ForEach(0..<18) { section in
+                HStack(spacing: 15) {
+                    ForEach(0..<11) {_ in
                         
-                        flowerViewOut()
-                            .foregroundColor(self.currentRow <= number ? Color(UIColor.hex("D8D8D7")) : Color(UIColor.hex("5A5E61")))
-                            .frame(width: 12, height: 12)
-                            .animation(
-                                Animation.easeInOut(duration: 0.35)
-                                    .delay(0.25)
-                            )
-                            .rotationEffect(.degrees(45))
+                        FlowersExhaleView()
+                            .foregroundColor(self.currentRow <= section ? Color(UIColor.hex("D8D8D7")) : Color(UIColor.hex("5A5E61")))
                         
                     }
                 }
             }
         }
+        
         .onAppear{
             stepFinish = 2
-            self.timer2 = Timer.publish(every: (timerSettings.stepThree / Double(13)), on: .main, in: .common).autoconnect()
+            secondCount = 0
+            self.timer2 = Timer.publish(every: (timerSettings.stepThree / Double(18)), on: .main, in: .common).autoconnect()
         }
         .onReceive(timer2) { currentTime in
             print(currentTime)
-            if self.currentRow > 13{
+            if self.currentRow > 18{
                 self.timer2.upstream.connect().cancel()
                 sleep(UInt32(0.5))
                 stepFinish = 3
             }
             self.currentRow += 1
         }
+        .onReceive(timer1) { currentTime in
+            print(currentTime)
+            self.secondCount += 1
+        }
+    }
+}
+
+struct FlowersExhaleView: View {
+
+    var body: some View {
+        ZStack {
+
+            VStack(spacing: 4){
+                RoundedRectangle(cornerRadius: 2)
+                    .stroke(Color.clear, lineWidth: 0)
+                    .frame(width: 2, height: 6)
+
+                RoundedRectangle(cornerRadius: 2)
+                    .stroke(Color.clear, lineWidth: 0)
+                    .frame(width: 2, height: 6)
+            }
+            HStack(spacing: 4){
+                RoundedRectangle(cornerRadius: 2)
+                    .frame(width: 6, height: 2)
+                
+                RoundedRectangle(cornerRadius: 2)
+                    .frame(width: 6, height: 2)
+            }
+          
+        }
+      
     }
 }
 
