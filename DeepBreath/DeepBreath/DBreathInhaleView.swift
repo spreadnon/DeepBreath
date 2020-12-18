@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct DBreathInhaleView: View {
-    @Binding var secondCount : Int
+    @Binding var secondCount : Double
     @Binding var stepFinish : Int
     
     @EnvironmentObject var timerSettings: TimerSettings
     @State var currentRow = 18
     @State var timer2 = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    @State var timer1 = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    @State var timer1 = Timer.publish(every: 0.001, on: .main, in: .common).autoconnect()
     
     
     var body: some View {
@@ -27,6 +27,8 @@ struct DBreathInhaleView: View {
                     }
                 }
             }
+            
+            Text(String.timestamp())
         }
         .onAppear{
             stepFinish = 0
@@ -38,15 +40,40 @@ struct DBreathInhaleView: View {
             
             if self.currentRow < 0{
                 self.timer2.upstream.connect().cancel()
+                self.timer1.upstream.connect().cancel()
                 sleep(UInt32(0.25))
                 stepFinish = 1
             }
             self.currentRow -= 1
+            
+            self.secondCount += Double((timerSettings.stepOne / Double(currentRow)))
         }
         .onReceive(timer1) { currentTime in
             print(currentTime)
-            self.secondCount += 1
+
+//            self.secondCount += 1
         }
+    }
+    
+    
+}
+
+extension String {
+    static func timestamp() -> String {
+        let dateFMT = DateFormatter()
+        dateFMT.locale = Locale(identifier: "en_US_POSIX")
+        dateFMT.dateFormat = "s"
+        let now = Date()
+
+        return String(format: "%@", dateFMT.string(from: now))
+    }
+
+    func tad2Date() -> Date? {
+        let dateFMT = DateFormatter()
+        dateFMT.locale = Locale(identifier: "en_US_POSIX")
+        dateFMT.dateFormat = "yyyyMMdd'T'HHmmss.SSSS"
+
+        return dateFMT.date(from: self)
     }
 }
 

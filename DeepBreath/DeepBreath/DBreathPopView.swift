@@ -77,7 +77,7 @@ struct PopBreathView: View {
     @State var breathType = 0
     @Binding var showSetting : Bool
     @State var stepFinish = 0
-    @State var secondCount = 0
+    @State var secondCount = 0.0
     var body: some View {
         VStack(spacing: 0) {
             
@@ -123,7 +123,7 @@ struct PopBreathView: View {
 struct ComeBackButtonView: View {
     @Binding var stepFinish :Int
     @Binding var showSetting : Bool
-    @Binding var secondCount :Int
+    @Binding var secondCount :Double
     var body: some View {
         HStack {
             Button(action:{
@@ -151,7 +151,7 @@ struct ComeBackButtonView: View {
             Text("\(secondCount)'")
                 .font(.system(size: 55, weight: .bold, design: .rounded))
                 .foregroundColor(Color(UIColor.hex("474747")).opacity(1))
-                .frame(width: 80, height: 40)
+//                .frame(width: 80, height: 40)
             
             Spacer()
             

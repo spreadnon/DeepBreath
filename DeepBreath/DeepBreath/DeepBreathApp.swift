@@ -14,7 +14,29 @@ struct DeepBreathApp: App {
 //            ContentView().environmentObject(TimerSettings())
 //            PathsView()
 //            DBreathHomeView()
-            DBreathPopView()
+//            DBreathPopView()
+//            VideoPlayerView()
+//            DBreathViewControllerView()
+            TodoListView()
+                .statusBar(hidden: true)
+                .preferredColorScheme(.dark)
+//            rrrtView()
         }
+    }
+}
+
+struct rrrtView: View {
+    var body: some View {
+        Text("Hello, world!")
+            .background(Color.yellow)
+            .font(.title)
+            .dump()
+    }
+}
+
+extension View {
+    func dump() -> Self {
+        print(Mirror(reflecting: self))
+        return self
     }
 }

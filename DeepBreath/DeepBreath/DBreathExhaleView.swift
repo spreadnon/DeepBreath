@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DBreathExhaleView: View {
-    @Binding var secondCount : Int
+    @Binding var secondCount : Double
     @EnvironmentObject var timerSettings: TimerSettings
     @State var currentRow = 0
     @State var timer1 = Timer.publish(every: 1, on: .main, in: .common).autoconnect()

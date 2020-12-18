@@ -8,16 +8,13 @@
 import SwiftUI
 
 struct DBreathHoldView: View {
-    @Binding var secondCount : Int
+    @Binding var secondCount : Double
     @EnvironmentObject var timerSettings: TimerSettings
     @State var currentRow = 18
     @State var timer2 = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    @State var timer1 = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    @State var timer1 = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
     @Binding var stepFinish : Int
-    @State var rowNumber = 0
-    @State var sectionNumber = 0
     @State var flowerViewDegrees = 0.0
-//    @State var timer1 = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
         VStack(spacing: 15) {
@@ -53,9 +50,6 @@ struct DBreathHoldView: View {
         }
         
         .onReceive(timer1) { currentTime in
-//            sectionNumber = getRandom(bigest: 13)
-//            rowNumber = getRandom(bigest: 10)
-            
             self.secondCount += 1
         }
     }
