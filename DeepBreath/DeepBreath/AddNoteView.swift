@@ -10,6 +10,8 @@ import SwiftUI
 struct AddNoteView: View {
     @State var username = ""
     @State var nickname = ""
+    
+    @Environment(\.presentationMode) var presentationMode
     var body: some View {
         VStack{
             HStack{
@@ -19,6 +21,7 @@ struct AddNoteView: View {
                 
                 Button(action:{
                     UIApplication.shared.endEditing()
+                    self.presentationMode.wrappedValue.dismiss()
                 })
                 {
                     Image(systemName: "checkmark.circle.fill" )
