@@ -30,10 +30,144 @@ struct HealthGroupBoxStyle<V: View>: GroupBoxStyle {
     }
 }
 
-struct TodoListView: View {
-    @State var showAlert = false
+//struct TodoListView: View {
+//    @State var showAlert = false
+//    @State var isShowingMailView = false
+//
+//    var restaurants: [Restaurant] = [
+//        Restaurant(name: "Joe's Original",label: "Songs played", image: "music.quarternote.3", value: "1031", unit: "Songs"),
+//        Restaurant(name: "Joe's Original",label: "Songs loved", image: "heart.fill", value: "59", unit: "Songs"),
+//        Restaurant(name: "Joe's Original The Real Joe's Original The Real Joe's Original The Real Joe's Original",label: "Plays", image: "play.fill", value: "3619", unit: "Times"),
+//        Restaurant(name: "Joe's Original",label: "Time played", image: "stopwatch", value: "165:14", unit: "Songs"),
+//        Restaurant(name: "Joe's Original",label: "Recently played", image: "timer", value: "134", unit: "Songs"),
+//        Restaurant(name: "Joe's Original The Real Joe's Original The Real Joe's Original The Real Joe's Original",label: "Skips", image: "forward.fill", value: "481", unit: ""),
+//        Restaurant(name: "Joe's Original",label: "Downloads", image: "icloud.and.arrow.down", value: "1031", unit: "Songs"),
+//        Restaurant(name: "Joe's Original",label: "Explicit", image: "e.square.fill", value: "293", unit: "Songs"),
+//        Restaurant(name: "Joe's Original The Real Joe's Original The Real Joe's Original The Real Joe's Original",label: "Genres", image: "guitars.fill", value: "7", unit: "Genres"),
+//        Restaurant(name: "Joe's Original",label: "Songs played", image: "music.quarternote.3", value: "1031", unit: "Songs"),
+//        Restaurant(name: "Joe's Original",label: "Songs loved", image: "heart.fill", value: "59", unit: "Songs"),
+//        Restaurant(name: "Joe's Original The Real Joe's Original The Real Joe's Original The Real Joe's Original",label: "Plays", image: "play.fill", value: "3619", unit: "Times"),
+//        Restaurant(name: "Joe's Original",label: "Time played", image: "stopwatch", value: "165:14", unit: "Songs"),
+//        Restaurant(name: "Joe's Original",label: "Recently played", image: "timer", value: "134", unit: "Songs"),
+//        Restaurant(name: "Joe's Original The Real Joe's Original The Real Joe's Original The Real Joe's Original",label: "Skips", image: "forward.fill", value: "481", unit: ""),
+//        Restaurant(name: "Joe's Original",label: "Downloads", image: "icloud.and.arrow.down", value: "1031", unit: "Songs"),
+//        Restaurant(name: "Joe's Original",label: "Explicit", image: "e.square.fill", value: "293", unit: "Songs"),
+//        Restaurant(name: "Joe's Original The Real Joe's Original The Real Joe's Original The Real Joe's Original",label: "Genres", image: "guitars.fill", value: "7", unit: "Genres")
+//        ]
+//
+//    var body: some View {
+//        VStack{
+//            HStack{
+//                Text("ToDo List")
+//                    .font(.system(size: 32, weight: .bold, design: .rounded))
+//                Spacer()
+//            }
+//            .padding(EdgeInsets(top: 40, leading: 16, bottom: 17, trailing: 16))
+//
+//            Spacer()
+//
+//            ScrollView {
+//                LazyVStack {
+//                    ForEach(restaurants, id: \.self) { restaurant in
+////                        GroupBox(label: Label("Heart rate", systemImage: "heart.fill")) {
+////                            RestaurantRow(restaurant: restaurant)
+////                        }.groupBoxStyle(HealthGroupBoxStyle(color: .red, destination: Text("Heart rate")))
+//
+////                        GroupBox(label:
+////                                    Text("2021.1.12")
+////                                    .font(.system(size: 15, weight: .bold, design: .rounded))
+////                                    .foregroundColor(Color.gray)
+////                        ) {
+//                            RestaurantRow(restaurant: restaurant)
+////                        }
+//
+//                    }
+//                }
+//                .padding([.leading,.trailing], 16)
+//                .padding([.bottom], 80)
+//            }
+//
+//            Spacer()
+//
+//            HStack{
+//                Spacer()
+//                Button(action:{
+//                    self.isShowingMailView.toggle()
+//                })
+//                {
+//                    Image(systemName: "plus.circle.fill")
+//                        .resizable()
+//                        .frame(width: 40, height: 40)
+//                        .foregroundColor(Color.white)//Color(UIColor.hex("FF4D6A"))
+//                        .font(.system(size: 20, weight: .bold, design: .default))
+////                    Image(systemName: "plus.circle.fill")//chevron.right
+////                        .resizable()
+////                        .renderingMode(.template)
+////                        .foregroundColor(.black)
+////                        .frame(width: 30, height: 30)
+////                        .padding(10)
+////                        .background(Color.white)//Color(red:240/255,green:174/255,blue:243/255)
+////                        .cornerRadius(10)
+//
+//                }
+////                .buttonStyle(PlainButtonStyle())
+////                .frame(width: 40, height: 40)
+//                .padding([.trailing], 24)
+//                .sheet(isPresented: $isShowingMailView) {
+//                    AddNoteView()
+//                }
+//                .shadow(color: Color(UIColor.hex("FF4D6A")).opacity(0.4), radius: 10, x: -10, y: -10)//.white
+//                .shadow(color: Color(red:174/255,green:174/255,blue:192/255).opacity(0.4), radius: 10, x: 10, y: 10)
+//
+//
+//            }
+//
+//        }
+//
+//    }
+//
+//}
+
+struct AddNoteBtnView: View {
     @State var isShowingMailView = false
-    
+    var body: some View {
+        VStack{
+            Spacer()
+            HStack{
+                Spacer()
+                Button(action:{
+                    self.isShowingMailView.toggle()
+                })
+                {
+                    Image(systemName: "plus.circle.fill")
+                        .resizable()
+                        .frame(width: 40, height: 40)
+                        .foregroundColor(Color.white)
+                        .font(.system(size: 20, weight: .bold, design: .default))
+                }
+                .padding([.trailing], 24)
+                .sheet(isPresented: $isShowingMailView) {
+                    AddNoteView()
+                }
+                .shadow(color: Color(UIColor.hex("FF4D6A")).opacity(0.4), radius: 10, x: -10, y: -10)//.white
+                .shadow(color: Color(red:174/255,green:174/255,blue:192/255).opacity(0.4), radius: 10, x: 10, y: 10)
+            }
+        }
+    }
+}
+
+
+
+struct TodoListView: View {
+//    let router: ListRouter
+    let router = ListRouter(usingStackNav: true)
+    @State var showAlert = false
+//    init(){
+//        UITableView.appearance().backgroundColor = .clear
+//        UITableViewCell.appearance().backgroundColor = .clear
+//        //若不要row分隔线的话：
+//        //UITableView.appearance().separatorStyle = .none
+//    }
     var restaurants: [Restaurant] = [
         Restaurant(name: "Joe's Original",label: "Songs played", image: "music.quarternote.3", value: "1031", unit: "Songs"),
         Restaurant(name: "Joe's Original",label: "Songs loved", image: "heart.fill", value: "59", unit: "Songs"),
@@ -54,85 +188,48 @@ struct TodoListView: View {
         Restaurant(name: "Joe's Original",label: "Explicit", image: "e.square.fill", value: "293", unit: "Songs"),
         Restaurant(name: "Joe's Original The Real Joe's Original The Real Joe's Original The Real Joe's Original",label: "Genres", image: "guitars.fill", value: "7", unit: "Genres")
         ]
-    
+
     var body: some View {
-        VStack{
-            HStack{
-                Text("ToDo List")
-                    .font(.system(size: 32, weight: .bold, design: .rounded))
-                Spacer()
-            }
-            .padding(EdgeInsets(top: 40, leading: 16, bottom: 17, trailing: 16))
-            
-            Spacer()
-            
-            ScrollView {
-                LazyVStack {
-                    ForEach(restaurants, id: \.self) { restaurant in
-//                        GroupBox(label: Label("Heart rate", systemImage: "heart.fill")) {
-//                            RestaurantRow(restaurant: restaurant)
-//                        }.groupBoxStyle(HealthGroupBoxStyle(color: .red, destination: Text("Heart rate")))
-                        
-//                        GroupBox(label:
-//                                    Text("2021.1.12")
-//                                    .font(.system(size: 15, weight: .bold, design: .rounded))
-//                                    .foregroundColor(Color.gray)
-//                        ) {
-                            RestaurantRow(restaurant: restaurant)
-//                        }
-                        
+        NavigationView {
+
+            ZStack{
+//                List {
+//                    ForEach(restaurants, id: \.self) { restaurant in
+//                        RestaurantRow(restaurant: restaurant)
+//                    }
+//                }
+                
+                List(restaurants) { restaurant in
+                    router.viewFor(route: .detailView(data: restaurant)) {
+                        RestaurantRow(restaurant: restaurant)
                     }
                 }
-                .padding([.leading,.trailing], 16)
-                .padding([.bottom], 80)
-            }
-            
-            Spacer()
-            
-            HStack{
-                Spacer()
-                Button(action:{
-                    self.isShowingMailView.toggle()
-                })
-                {
-                    Image(systemName: "plus.circle.fill")
-                        .resizable()
-                        .frame(width: 40, height: 40)
-                        .foregroundColor(Color.white)//Color(UIColor.hex("FF4D6A"))
-                        .font(.system(size: 20, weight: .bold, design: .default))
-//                    Image(systemName: "plus.circle.fill")//chevron.right
-//                        .resizable()
-//                        .renderingMode(.template)
-//                        .foregroundColor(.black)
-//                        .frame(width: 30, height: 30)
-//                        .padding(10)
-//                        .background(Color.white)//Color(red:240/255,green:174/255,blue:243/255)
-//                        .cornerRadius(10)
-                    
-                }
-//                .buttonStyle(PlainButtonStyle())
-//                .frame(width: 40, height: 40)
-                .padding([.trailing], 24)
-                .sheet(isPresented: $isShowingMailView) {
-                    AddNoteView()
-                }
-                .shadow(color: Color(UIColor.hex("FF4D6A")).opacity(0.4), radius: 10, x: -10, y: -10)//.white
-                .shadow(color: Color(red:174/255,green:174/255,blue:192/255).opacity(0.4), radius: 10, x: 10, y: 10)
                 
-                
-            }
-            
+                AddNoteBtnView()
+            }.navigationBarTitle("ToDo List", displayMode: .large)
+
+//            ZStack{
+//                ScrollView {
+//                    LazyVStack {
+//                        ForEach(restaurants, id: \.self) { restaurant in
+//                            RestaurantRow(restaurant: restaurant)
+//                                .padding([.leading,.trailing], 24)
+//                        }
+//                    }
+//                }
+//                AddNoteBtnView()
+//            }.navigationBarTitle("ToDo List", displayMode: .large)
+
         }
-        
     }
 
 }
 
-struct TodoListView_Previews: PreviewProvider {
-    static var previews: some View {
-        TodoListView()
-    }
-}
+//struct TodoListView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TodoListView()
+//    }
+//}
 
 
 struct RestaurantRow: View {
@@ -244,4 +341,67 @@ struct Restaurant: Identifiable,Hashable {
     var image: String
     var value: String
     var unit: String
+}
+
+protocol Router {
+  associatedtype Route
+  func viewFor<T: View>(route: Route, content: () -> T) -> AnyView
+}
+
+enum ListRoute {
+    case detailView(data: Restaurant)
+}
+
+struct ListView<ListRouter: Router>: View where ListRouter.Route == ListRoute {
+    let router: ListRouter
+
+    var restaurants: [Restaurant] = [
+        Restaurant(name: "Joe's Original",label: "Songs played", image: "music.quarternote.3", value: "1031", unit: "Songs"),
+        Restaurant(name: "Joe's Original",label: "Songs loved", image: "heart.fill", value: "59", unit: "Songs"),
+        Restaurant(name: "Joe's Original The Real Joe's Original The Real Joe's Original The Real Joe's Original",label: "Plays", image: "play.fill", value: "3619", unit: "Times"),
+        Restaurant(name: "Joe's Original",label: "Time played", image: "stopwatch", value: "165:14", unit: "Songs"),
+        Restaurant(name: "Joe's Original",label: "Recently played", image: "timer", value: "134", unit: "Songs"),
+        Restaurant(name: "Joe's Original The Real Joe's Original The Real Joe's Original The Real Joe's Original",label: "Skips", image: "forward.fill", value: "481", unit: ""),
+        Restaurant(name: "Joe's Original",label: "Downloads", image: "icloud.and.arrow.down", value: "1031", unit: "Songs"),
+        Restaurant(name: "Joe's Original",label: "Explicit", image: "e.square.fill", value: "293", unit: "Songs"),
+        Restaurant(name: "Joe's Original The Real Joe's Original The Real Joe's Original The Real Joe's Original",label: "Genres", image: "guitars.fill", value: "7", unit: "Genres"),
+        Restaurant(name: "Joe's Original",label: "Songs played", image: "music.quarternote.3", value: "1031", unit: "Songs"),
+        Restaurant(name: "Joe's Original",label: "Songs loved", image: "heart.fill", value: "59", unit: "Songs"),
+        Restaurant(name: "Joe's Original The Real Joe's Original The Real Joe's Original The Real Joe's Original",label: "Plays", image: "play.fill", value: "3619", unit: "Times"),
+        Restaurant(name: "Joe's Original",label: "Time played", image: "stopwatch", value: "165:14", unit: "Songs"),
+        Restaurant(name: "Joe's Original",label: "Recently played", image: "timer", value: "134", unit: "Songs"),
+        Restaurant(name: "Joe's Original The Real Joe's Original The Real Joe's Original The Real Joe's Original",label: "Skips", image: "forward.fill", value: "481", unit: ""),
+        Restaurant(name: "Joe's Original",label: "Downloads", image: "icloud.and.arrow.down", value: "1031", unit: "Songs"),
+        Restaurant(name: "Joe's Original",label: "Explicit", image: "e.square.fill", value: "293", unit: "Songs"),
+        Restaurant(name: "Joe's Original The Real Joe's Original The Real Joe's Original The Real Joe's Original",label: "Genres", image: "guitars.fill", value: "7", unit: "Genres")
+        ]
+
+
+    var body: some View {
+        List(restaurants) { restaurant in
+            router.viewFor(route: .detailView(data: restaurant)) {
+                RestaurantRow(restaurant: restaurant)
+            }
+        }
+    }
+}
+
+struct ListRouter: Router {
+  typealias Route = ListRoute
+  var usingStackNav = false
+  
+  func viewFor<T>(route: ListRoute, content: () -> T) -> AnyView where T : View {
+    switch route {
+    case .detailView(let item):
+      if usingStackNav {
+        return AnyView(NavigationLink(destination: RouterDetailView(item: item)) {
+          content()
+        })
+      } else {
+        return AnyView(Button(action: { /* Update state, maybe set tab view to item */ }) {
+          content()
+        })
+      }
+    }
+  }
 }

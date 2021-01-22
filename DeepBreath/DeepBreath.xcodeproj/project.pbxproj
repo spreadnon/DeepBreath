@@ -47,6 +47,7 @@
 		F79264392589F1CD008ECE75 /* MyFirefilesParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = F79264382589F1CD008ECE75 /* MyFirefilesParticle.sks */; };
 		F792643E2589F50B008ECE75 /* MyScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F792643D2589F50B008ECE75 /* MyScene.sks */; };
 		F7A1D3CA257E1BC100EE4478 /* DBreathHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A1D3C9257E1BC000EE4478 /* DBreathHomeView.swift */; };
+		F7A83C1B25BACE7300F4FF1B /* RouterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A83C1A25BACE7300F4FF1B /* RouterDetailView.swift */; };
 		F7CB417925779C52009FDD10 /* UIColor+Speedy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CB417225779C52009FDD10 /* UIColor+Speedy.swift */; };
 		F7CB417A25779C52009FDD10 /* UILabel+Speedy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CB417325779C52009FDD10 /* UILabel+Speedy.swift */; };
 		F7CB417B25779C52009FDD10 /* UIFont+Speedy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CB417425779C52009FDD10 /* UIFont+Speedy.swift */; };
@@ -122,6 +123,7 @@
 		F79264382589F1CD008ECE75 /* MyFirefilesParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyFirefilesParticle.sks; sourceTree = "<group>"; };
 		F792643D2589F50B008ECE75 /* MyScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyScene.sks; sourceTree = "<group>"; };
 		F7A1D3C9257E1BC000EE4478 /* DBreathHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBreathHomeView.swift; sourceTree = "<group>"; };
+		F7A83C1A25BACE7300F4FF1B /* RouterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterDetailView.swift; sourceTree = "<group>"; };
 		F7CB417225779C52009FDD10 /* UIColor+Speedy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Speedy.swift"; sourceTree = "<group>"; };
 		F7CB417325779C52009FDD10 /* UILabel+Speedy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Speedy.swift"; sourceTree = "<group>"; };
 		F7CB417425779C52009FDD10 /* UIFont+Speedy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Speedy.swift"; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				F79264002589AD72008ECE75 /* DBreathViewController.swift */,
 				F7FDFC0F258C856E0066350E /* TodoListView.swift */,
 				F7DE0E06258CA55A00FA37AA /* AddNoteView.swift */,
+				F7A83C1A25BACE7300F4FF1B /* RouterDetailView.swift */,
 				F71741D7258B460800201115 /* MyTileSet.sks */,
 				F728AA442579E0B900C79667 /* BiscuitView */,
 				F7CB417025779C52009FDD10 /* Extension */,
@@ -448,6 +451,7 @@
 				F728AA562579E0BA00C79667 /* BiscuitViewController+Transitioning.swift in Sources */,
 				F7FDFC10258C856E0066350E /* TodoListView.swift in Sources */,
 				F7D908C3257F4C6E0046D8F2 /* CircleLabel.swift in Sources */,
+				F7A83C1B25BACE7300F4FF1B /* RouterDetailView.swift in Sources */,
 				F728AA5C2579E0BA00C79667 /* BiscuitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
