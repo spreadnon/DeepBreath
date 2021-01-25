@@ -193,17 +193,17 @@ struct TodoListView: View {
         NavigationView {
 
             ZStack{
-//                List {
-//                    ForEach(restaurants, id: \.self) { restaurant in
-//                        RestaurantRow(restaurant: restaurant)
-//                    }
-//                }
-                
-                List(restaurants) { restaurant in
-                    router.viewFor(route: .detailView(data: restaurant)) {
+                List {
+                    ForEach(restaurants, id: \.self) { restaurant in
                         RestaurantRow(restaurant: restaurant)
                     }
                 }
+                
+//                List(restaurants) { restaurant in
+//                    router.viewFor(route: .detailView(data: restaurant)) {
+//                        RestaurantRow(restaurant: restaurant)
+//                    }
+//                }
                 
                 AddNoteBtnView()
             }.navigationBarTitle("ToDo List", displayMode: .large)
@@ -277,15 +277,39 @@ struct RestaurantRow: View {
                 
                 Spacer()
                 
-                Text("•••")
-                    .foregroundColor(Color(UIColor.hex("FF4D6A")))
-                    .font(.system(size: 18, weight: .regular, design: .rounded))
-                    .onTapGesture {
-                        showDetail.toggle()
-                    }.sheet(isPresented: $showDetail) {
-                        
-                    }
+//                Text("•••")
+//                    .foregroundColor(Color(UIColor.hex("FF4D6A")))
+//                    .font(.system(size: 18, weight: .regular, design: .rounded))
+////                    .onTapGesture {
+////                        showDetail.toggle()
+////                    }.sheet(isPresented: $showDetail) {
+////
+////                    }
+//                    .contextMenu {
+//                        Button(action: {
+//                            // change country setting
+//                        }) {
+//                            Text("Delete")
+//                            Image(systemName: "trash")
+//                        }
+//
+//                        Button(action: {
+//                            // enable geolocation
+//                        }) {
+//                            Text("Rename")
+//                            Image(systemName: "location.circle")
+//                        }
+//                    }
 
+                
+                Menu {
+                    Button("Delete", action: deleteClick)
+                    Button("Rename", action: renameClick)
+                } label: {
+                    Text("•••")
+                        .foregroundColor(Color(UIColor.hex("FF4D6A")))
+                        .font(.system(size: 18, weight: .regular, design: .rounded))
+                }
                  
             }
             
@@ -295,6 +319,15 @@ struct RestaurantRow: View {
         }
         
     }
+    
+    func deleteClick() {
+        
+    }
+    
+    func renameClick() {
+        
+    }
+    
 }
 
 struct RestaurantDetailRow: View {
@@ -404,4 +437,19 @@ struct ListRouter: Router {
       }
     }
   }
+}
+
+
+struct TestAppStorageView: View {
+    @AppStorage("username") var username: String = "Anonymous"
+
+    var body: some View {
+        VStack {
+            Text("Welcome, \(username)!")
+
+            Button("Log in") {
+                self.username = "@twostraws"
+            }
+        }
+    }
 }
