@@ -196,7 +196,7 @@ struct TodoListView: View {
                 List {
                     ForEach(restaurants, id: \.self) { restaurant in
                         RestaurantRow(restaurant: restaurant)
-                    }
+                    }.listRowBackground(Color.black)
                 }
                 
 //                List(restaurants) { restaurant in
@@ -207,7 +207,8 @@ struct TodoListView: View {
                 
                 AddNoteBtnView()
             }.navigationBarTitle("ToDo List", displayMode: .large)
-
+            .padding([.leading], -15)
+            
 //            ZStack{
 //                ScrollView {
 //                    LazyVStack {
@@ -277,34 +278,16 @@ struct RestaurantRow: View {
                 
                 Spacer()
                 
-//                Text("•••")
-//                    .foregroundColor(Color(UIColor.hex("FF4D6A")))
-//                    .font(.system(size: 18, weight: .regular, design: .rounded))
-////                    .onTapGesture {
-////                        showDetail.toggle()
-////                    }.sheet(isPresented: $showDetail) {
-////
-////                    }
-//                    .contextMenu {
-//                        Button(action: {
-//                            // change country setting
-//                        }) {
-//                            Text("Delete")
-//                            Image(systemName: "trash")
-//                        }
-//
-//                        Button(action: {
-//                            // enable geolocation
-//                        }) {
-//                            Text("Rename")
-//                            Image(systemName: "location.circle")
-//                        }
-//                    }
-
-                
                 Menu {
-                    Button("Delete", action: deleteClick)
-                    Button("Rename", action: renameClick)
+                    Button(action: renameClick) {
+                        Text("Rename")
+                        Image(systemName: "pencil.and.outline")
+                    }
+                    Button(action: deleteClick) {
+                        Text("Delete")
+                        Image(systemName: "trash")
+                    }
+                    
                 } label: {
                     Text("•••")
                         .foregroundColor(Color(UIColor.hex("FF4D6A")))
